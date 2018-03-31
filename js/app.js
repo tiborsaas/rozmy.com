@@ -1,4 +1,4 @@
-let camera, scene, renderer, composer, object, light, cube;
+let camera, scene, renderer, composer, object, light, videoMesh;
 
 init();
 
@@ -15,12 +15,19 @@ function init() {
     camera.position.z = 2;
 
     scene = new THREE.Scene();
-    scene.fog = new THREE.Fog( 0x000000, 1, 1000 );
 
-    const geometry = new THREE.BoxGeometry( 1, 1, 1 );
-    const material = new THREE.MeshBasicMaterial( {color: 0x00ff00} );
-    cube = new THREE.Mesh( geometry, material );
-    scene.add( cube );
+    const geometry = new THREE.PlaneGeometry( 5, 5*9/16, 3 );
+    texture = new THREE.VideoTexture( video );
+    texture.minFilter = THREE.LinearFilter;
+    texture.magFilter = THREE.LinearFilter;
+    texture.format = THREE.RGBFormat;
+
+    const material = new THREE.MeshLambertMaterial({
+        map: texture
+    });
+
+    videoMesh = new THREE.Mesh( geometry, material );
+    scene.add( videoMesh );
 
     // LIGHTS
 
@@ -39,19 +46,21 @@ function onWindowResize() {
     composer.setSize( window.innerWidth, window.innerHeight );
 }
 
-let targetRotation = 0;
+let targetRotationX = 0, targetRotationY = 0;
 
 window.addEventListener('scroll', e => {
-    targetRotation = window.scrollY / window.innerHeight;
+    targetRotationX = ( window.scrollY / window.innerHeight );
+});
+
+window.addEventListener('mousemove', e => {
+    targetRotationY = ( ( window.innerWidth / 2 - e.clientX  ) / window.innerWidth );
 });
 
 function animate() {
 
     requestAnimationFrame( animate );
-
-    var time = Date.now();
-
-    cube.rotation.x += ( targetRotation - cube.rotation.x ) * 0.03;
+    videoMesh.rotation.x += ( targetRotationX - videoMesh.rotation.x ) * 0.03; // Scroll
+    videoMesh.rotation.y += ( targetRotationY - videoMesh.rotation.y ) * 0.05; // MouseX
 
     // composer.render();
     renderer.render(scene, camera);
