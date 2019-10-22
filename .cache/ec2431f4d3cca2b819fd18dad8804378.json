@@ -1,0 +1,1 @@
+{"dependencies":[],"generated":{"css":"*{margin:0;padding:0;box-sizing:border-box}canvas#hero{position:fixed;left:0;top:0}main{margin-top:100vh}article{z-index:1;position:relative}article.slide{height:100vh;background:hsla(0,0%,9%,.5);display:flex;justify-content:center;align-items:center}","js":""},"hash":"16719a1e0e039452868d1069e36d98a0","cacheData":{}}
