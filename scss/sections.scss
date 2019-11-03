@@ -1,29 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'pano';
-}
-
-article {
-    z-index: 1;
+section {
     position: relative;
-    height: 100vh;
-    background: lightgray;
-    display: flex;
-    &.vcenter {
-        align-items: center;
-        justify-content: center;
-    }
     p {
-        font-family: 'ahamono';
+        font-family: $mono-font;
     }
-}
-
-article.slide {
-    height: 100vh;
-    background: rgba(23, 23, 23, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

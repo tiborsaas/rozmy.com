@@ -1,0 +1,23 @@
+section.hero {
+    display: flex;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    h1 {
+        font-family: $display-font;
+        font-weight: 400;
+        font-size: 84px;
+        line-height: 88px;
+        width: 46rem;
+        padding-bottom: 1rem;
+        span {
+            font-family: inherit;
+            display: block;
+        }
+    }
+    a {
+        font-size: 12px;
+        padding: 1rem 0;
+    }
+}

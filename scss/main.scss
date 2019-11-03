@@ -1,2 +1,16 @@
+@import 'variables';
+@import 'helpers';
 @import 'imports';
 @import 'sections';
+//
+@import 'modules/nav';
+@import 'modules/hero';
+@import 'modules/bio';
+@import 'modules/logos';
+@import 'modules/footer';
+//
+main {
+    max-width: $max-width;
+    position: relative;
+    margin: auto;
+}
