@@ -4,19 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html --public-url https://rozmy-portfolio.netlify.com",
+    "copy-browserconfig": "cp assets/browserconfig dist"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@types/three": "^0.91.3",
-    "extract-svg-path": "^2.1.0",
-    "load-svg": "^1.0.0",
-    "mesh-reindex": "^1.0.0",
-    "svg": "^0.1.0",
-    "svg-mesh-3d": "^1.1.0",
-    "three": "^0.91.0",
-    "three-simplicial-complex": "^69.0.6",
-    "unindex-mesh": "^2.0.0"
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.23.3"
   }
 }
