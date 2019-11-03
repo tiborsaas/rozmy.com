@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1246" height="569" viewBox="0 0 1246 569">
+  <g fill="none" fill-rule="evenodd" transform="translate(-66 1)">
+    <text fill="#FFF" font-family="PanoTrial-Regular, Pano Trial" font-size="100" font-style="expanded">
+      <tspan x="198" y="210">When attitude </tspan> <tspan x="198" y="310">became a form</tspan>
+    </text>
+    <g stroke="#979797">
+      <polygon points="0 0 245.227 425.25 160.341 567 330.114 567 415 425.25 160.341 0"/>
+      <polygon points="320 0 565.227 425.25 480.341 567 650.114 567 735 425.25 480.341 0"/>
+      <path d="M830.999,0 L916,142.5 L831,285 L661,285 L746,142.5 L664.147,0 L830.999,0 Z"/>
+    </g>
+  </g>
+</svg>
