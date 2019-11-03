@@ -1,18 +1,21 @@
 {
-  "name": "rozmy.com",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html --public-url https://rozmy-portfolio.netlify.com",
-    "copy-browserconfig": "cp assets/browserconfig dist"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {},
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.23.3"
-  }
+    "name": "rozmy.com",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "parcel index.html --open",
+        "build": "npm-run-all build-page copy-browserconfig",
+        "build-page": "parcel build index.html --public-url https://rozmy-portfolio.netlify.com",
+        "copy-browserconfig": "cpx ./assets/browserconfig/*.* ./dist"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {},
+    "devDependencies": {
+        "cpx": "^1.5.0",
+        "npm-run-all": "^4.1.5",
+        "parcel-bundler": "^1.12.4",
+        "sass": "^1.23.3"
+    }
 }
