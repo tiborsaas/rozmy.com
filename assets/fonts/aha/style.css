@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "AHAMONO";
+    src: url("ahamono-monospaced.woff2") format("woff2"), url("ahamono-monospaced.woff") format("woff"), url("ahamono-monospaced.otf") format("opentype");
+    font-style: normal;
+    font-weight: 400;
+}
