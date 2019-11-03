@@ -7,7 +7,7 @@
         "start": "parcel index.html --open",
         "build": "npm-run-all build-page copy-browserconfig",
         "build-page": "parcel build index.html --public-url https://rozmy-portfolio.netlify.com",
-        "copy-browserconfig": "cpx ./assets/browserconfig/*.* ./dist"
+        "copy-browserconfig": "cpx 'assets/browserconfig/*.*' dist"
     },
     "author": "",
     "license": "ISC",
