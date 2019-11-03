@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>three.js webgl - postprocessing - digital glitch</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<link rel="stylesheet" href="css/main.css">
-	</head>
-	<body>
-		<video id="video" autoplay loop crossOrigin="anonymous" webkit-playsinline style="display:none">
-			<source src="video/rozmy-reel-background.mp4">
-		</video>
 
-		<canvas id="hero"></canvas>
+<head>
+    <title>Rozmy's awesome portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="./scss/main.scss">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./assets/icons/safari-pinned-tab.svg" color="#101010">
+    <meta name="msapplication-TileColor" content="#101010">
+    <meta name="theme-color" content="#ffffff">
+</head>
 
-		<main>
-			<article class="first slide">ACID</article>
-			<article class="second slide">ACID</article>
-		</main>
+<body>
+    <main>
+        <nav>
+            <section>
+                <article class="logo"></article>
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/rozmy/" target="_blank">Linkedin</a></li>
+                    <li><a href="https://www.behance.net/rozmy" target="_blank">Behance</a></li>
+                </ul>
+            </section>
+        </nav>
+        <section class="screen hero">
+            <h1><span>Designer</span> of your next product</h1>
+            <a href="mailto:info@rozmy.com">info@rozmy.com</a>
+        </section>
+        <section class="screen bio">
+            <article class="about">
+                <p>
+                    Currently working at Kinsta, to make a word-class service for your website management thru building a kick-ass team, user flows, prototypes, design system and new features.
+                </p>
+                <p>
+                    As a side project I do pixel art and UI for an android game. <span class="crossout">Available for freelance.</span>
+                </p>
+            </article>
+        </section>
+        <section class="screen logos">
+            <ul class="logo-grid">
+                <li><img src="./assets/logos/kinsta-logo.svg"></li>
+                <li><img src="./assets/logos/vodafone-logo.svg"></li>
+                <li><img src="./assets/logos/wizzair-logo.svg"></li>
+                <li><img src="./assets/logos/formlabs-logo.svg"></li>
+                <li><img src="./assets/logos/a38-logo.svg"></li>
+                <li><img src="./assets/logos/t-mobile-logo.svg"></li>
+                <li><img src="./assets/logos/burn-logo.svg"></li>
+                <li><img src="./assets/logos/pinetime-logo.svg"></li>
+                <li><img src="./assets/logos/redbull-logo.svg"></li>
+                <li><img src="./assets/logos/lufthansa-systems-logo.svg"></li>
+                <li><img src="./assets/logos/sendee-logo.svg"></li>
+                <li><img src="./assets/logos/lab-coop-logo.svg"></li>
+                <li><img src="./assets/logos/saatchi-and-saatchi-logo.svg"></li>
+                <li><img src="./assets/logos/umbrella-logo.svg"></li>
+                <li><img src="./assets/logos/mito-logo.svg"></li>
+                <li><img src="./assets/logos/ogilvy-logo.svg"></li>
+            </ul>
+        </section>
 
-		<script src="js/three.min.js"></script>
-		<script src="js/app.js"></script>
+        <footer>
+            <a href="./humans.txt">humans.txt</a>
+            <p>Set your goals and break the rules</p>
+        </footer>
+    </main>
+    <script src="./js/app.js"></script>
+</body>
 
-	</body>
 </html>
