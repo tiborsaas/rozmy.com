@@ -1,4 +1,6 @@
 temp
+dist
+.cache
 
 # Logs
 logs
