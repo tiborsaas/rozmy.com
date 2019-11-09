@@ -1,0 +1,45 @@
+section.wolves-header {
+    margin-bottom: -9.2rem;
+
+    img.grid {
+        position: absolute;
+        left: 9.8rem;
+        top: 4rem;
+        z-index: 2;
+    }
+
+    img.rozmy {
+        position: relative;
+        width: 66%;
+        margin-left: 28.5%;
+        z-index: 1;
+    }
+
+    img.logo {
+        position: absolute;
+        width: 45%;
+        right: -6rem;
+        top: 7.6rem;
+        z-index: 2;
+    }
+
+    img.trouble {
+        position: absolute;
+        width: 50%;
+        left: 1.5rem;
+        bottom: 2.5rem;
+        z-index: 0;
+        width: 27%;
+    }
+
+    h1 {
+        font-family: pano;
+        font-weight: 400;
+        font-size: 100px;
+        position: absolute;
+        bottom: 5rem;
+        left: -8px;
+        line-height: 1em;
+        z-index: 2;
+    }
+}
