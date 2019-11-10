@@ -1,0 +1,41 @@
+section.wild-mind-header {
+    img {
+        &.arrows {
+            width: 55rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        &.spray {
+            position: absolute;
+            top: 4rem;
+            right: -5rem;
+            z-index: 0;
+            width: 59%;
+        }
+    }
+
+    h1 {
+        font-family: pano;
+        line-height: 1em;
+        font-weight: 400;
+        font-size: 100px;
+        position: absolute;
+        top: 5.5rem;
+        left: 8rem;
+        z-index: 2;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 40px;
+
+        p {
+            grid-column: 6/13;
+            margin-top: 2rem;
+            margin-bottom: 6rem;
+            line-height: 2em;
+        }
+    }
+}
