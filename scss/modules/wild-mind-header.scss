@@ -1,17 +1,20 @@
 section.wild-mind-header {
+    overflow: hidden;
+
     img {
         &.arrows {
-            width: 55rem;
+            width: 100%;
             z-index: 1;
             position: relative;
         }
 
         &.spray {
             position: absolute;
-            top: 4rem;
-            right: -5rem;
+            top: 11%;
+            right: -3rem;
             z-index: 0;
             width: 59%;
+            opacity: .9;
         }
     }
 
@@ -36,6 +39,31 @@ section.wild-mind-header {
             margin-top: 2rem;
             margin-bottom: 6rem;
             line-height: 2em;
+        }
+    }
+
+    @media(max-width: 1176px) {
+        h1 {
+            font-size: 8vw;
+            line-height: 9vw;
+            left: $main-padding;
+        }
+    }
+
+    @media(max-width: 822px) {
+        .content {
+            grid-template-columns: 1fr;
+
+            p {
+                grid-column: 1/3;
+                margin-bottom: 0rem;
+            }
+        }
+    }
+
+    @media(max-width: 855px) {
+        img.spray {
+            top: 18%;
         }
     }
 }

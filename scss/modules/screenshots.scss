@@ -9,6 +9,7 @@ section.screenshots {
             font-size: 14px;
             font-weight: normal;
             line-height: 2em;
+
             span {
                 display: block;
             }
@@ -47,6 +48,57 @@ section.screenshots {
             &.akvarium {
                 h1 {
                     grid-column: 4/6;
+                }
+            }
+        }
+
+        @media(max-width: 880px) {
+            grid-template-columns: .2fr .8fr;
+
+            h1 {
+                grid-column: 1/2 !important;
+            }
+            img {
+                grid-column: 2/4 !important;
+                width: 100% !important;
+            }
+
+            &.left.a38 {
+                img {
+                    order: 2;
+                }
+                h1 {
+                    order: 1;
+                    position: absolute;
+                }
+            }
+        }
+
+        @media(max-width: 480px) {
+            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column;
+
+            h1 {
+                grid-column: 1/2 !important;
+                margin-bottom: .5rem;
+            }
+
+            img {
+                grid-column: 1/2 !important;
+                width: 100% !important;
+            }
+
+            &.left.a38 {
+                display: flex;
+
+                img {
+                    order: 2;
+                }
+
+                h1 {
+                    order: 1;
+                    position: relative;
                 }
             }
         }

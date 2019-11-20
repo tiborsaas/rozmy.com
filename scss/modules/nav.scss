@@ -1,22 +1,26 @@
 nav {
     position: fixed;
-    top: 0;
+    top: 2rem;
     left: 0;
     right: 0;
-    z-index: 1;
-    padding: 4rem;
+    z-index: 3;
+
     section {
         display: flex;
         justify-content: space-between;
         align-items: center;
         max-width: $max-width;
+        padding: $main-padding;
         margin: auto;
     }
+
     ul {
         display: flex;
         list-style-type: none;
+
         li {
             margin-left: 2rem;
+
             a {
                 color: $white;
                 font-size: 0.8rem;

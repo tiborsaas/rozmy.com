@@ -12,4 +12,25 @@ section.logos {
             transform: scale(.75);
         }
     }
+
+    @media(max-width: 727px) {
+        margin-bottom: 4rem;
+
+        .logo-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media(max-width: 500px) {
+        .logo-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media(max-width: 360px) {
+        grid-gap: 0;
+        .logo-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
 }
