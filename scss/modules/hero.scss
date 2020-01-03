@@ -3,6 +3,7 @@ section.hero {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    position: relative;
 
     h1 {
         font-family: $display-font;
@@ -11,6 +12,8 @@ section.hero {
         line-height: 88px;
         width: 46rem;
         padding-bottom: 1rem;
+        position: relative;
+        z-index: 1;
 
         span {
             font-family: inherit;
@@ -21,6 +24,14 @@ section.hero {
     a {
         font-size: 12px;
         padding: 1rem 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 
     @media(max-width: 727px) {

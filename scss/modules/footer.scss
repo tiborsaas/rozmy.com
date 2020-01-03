@@ -1,5 +1,28 @@
 footer {
-    padding: 14rem 0;
-    display: flex;
-    justify-content: space-between;
+    padding: 14rem 2rem;
+
+    article {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-column-gap: 40px;
+
+        div {
+            grid-column: 1/6;
+        }
+
+        p {
+            grid-column: 6/13;
+        }
+    }
+
+    @media(max-width: 500px) {
+        article {
+            display: flex;
+            flex-direction: column;
+
+            div {
+                margin-bottom: 1rem;
+            }
+        }
+    }
 }
