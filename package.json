@@ -5,9 +5,10 @@
     "main": "index.js",
     "scripts": {
         "start": "parcel index.html --open",
-        "build": "npm-run-all build-page copy-browserconfig",
+        "build": "npm-run-all build-page copy-browserconfig copy-humans",
         "build-page": "parcel build index.html --public-url https://rozmy-portfolio.netlify.com",
-        "copy-browserconfig": "cpx 'assets/browserconfig/*.*' dist"
+        "copy-browserconfig": "cpx 'assets/browserconfig/*.*' dist",
+        "copy-humans": "cpx 'humans.txt' dist"
     },
     "author": "",
     "license": "ISC",
