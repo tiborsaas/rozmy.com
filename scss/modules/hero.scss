@@ -1,9 +1,15 @@
 section.hero {
     height: 110vh;
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
     position: relative;
+    flex-direction: column;
+    padding-top: 11rem;
+
+    article {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
 
     h1 {
         font-family: $display-font;
@@ -29,10 +35,9 @@ section.hero {
     }
 
     video {
-        position: absolute;
-        left: 0;
-        top: 9.5rem;
         width: 100%;
+        object-fit: cover;
+        margin-bottom: 5rem;
     }
 
     @media(max-width: 727px) {
