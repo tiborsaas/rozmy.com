@@ -1,5 +1,5 @@
 section.hero {
-    height: 100vh;
+    height: 110vh;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -28,10 +28,11 @@ section.hero {
         z-index: 1;
     }
 
-    canvas {
+    video {
         position: absolute;
         left: 0;
-        top: 0;
+        top: 9.5rem;
+        width: 100%;
     }
 
     @media(max-width: 727px) {

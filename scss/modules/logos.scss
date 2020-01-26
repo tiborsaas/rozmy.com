@@ -30,7 +30,7 @@ section.logos {
     @media(max-width: 360px) {
         grid-gap: 0;
         .logo-grid {
-            grid-template-columns: repeat(1, 1fr);
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }

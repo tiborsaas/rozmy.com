@@ -20,10 +20,21 @@ section.screenshots {
         img {
             object-fit: contain;
             width: 100%;
+            z-index: 1;
+            position: relative;
+        }
+
+        a {
+            position: absolute;
+            width:55%;
+            z-index: 2;
+            border: none;
+            // background: red;
         }
 
         .hover-title {
             visibility: hidden;
+            mix-blend-mode: difference;
             opacity: 0;
             position: fixed;
             left: 0;
@@ -37,6 +48,7 @@ section.screenshots {
             font-family: pano;
             font-size: 3rem;
             pointer-events: none;
+            z-index: 2;
         }
 
         &.kinsta .hover-title {
@@ -76,6 +88,11 @@ section.screenshots {
                     grid-column: 9/10;
                 }
             }
+
+            a {
+                height: 18%;
+                left: 8rem;
+            }
         }
 
         &.right {
@@ -92,14 +109,27 @@ section.screenshots {
                     grid-column: 4/6;
                 }
             }
+
+            a {
+                height: 21%;
+                width: 62%;
+                right: -4rem;
+            }
         }
 
         @media(max-width: 880px) {
             grid-template-columns: .2fr .8fr;
 
+            a {
+                left: 12rem !important;
+                width: 73% !important;
+                height: 19% !important;
+            }
+
             h1 {
                 grid-column: 1/2 !important;
             }
+
             img {
                 grid-column: 2/4 !important;
                 width: 100% !important;
@@ -113,6 +143,10 @@ section.screenshots {
                     order: 1;
                     position: absolute;
                 }
+            }
+
+            .hover-title {
+                display: none;
             }
         }
 

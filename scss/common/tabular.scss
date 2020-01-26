@@ -53,10 +53,6 @@ article.table-layout {
                 max-height: 100%;
                 max-width: 100%;
                 transition: all .5s ease;
-
-                &:hover {
-                    transform: scale(1.268);
-                }
             }
         }
 
@@ -70,7 +66,32 @@ article.table-layout {
                 padding: 0;
 
                 a {
-                    border-bottom: 1px solid #fff;
+                    position: relative;
+                    height: 100%;
+                    display: block;
+                    border: none;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        right: -22rem;
+                        left: -34rem;
+                        height: calc(100% + 1rem);
+                        top: -.5rem;
+                        background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pjxzdmcgdmlld0JveD0iMCAwIDMyIDMyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojMDAwO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6MnB4O308L3N0eWxlPjwvZGVmcz48dGl0bGUvPjxnIGlkPSJjaGV2cm9uLXJpZ2h0Ij48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSIyMSIgeDI9IjEyIiB5MT0iMTYiIHkyPSIyNSIvPjxsaW5lIGNsYXNzPSJjbHMtMSIgeDE9IjEyIiB4Mj0iMjEiIHkxPSI3IiB5Mj0iMTYiLz48L2c+PC9zdmc+);
+                        background-size: 15px;
+                        background-repeat: no-repeat;
+                        background-position: calc(100% - 1rem) center;
+                        filter: invert(1);
+                        mix-blend-mode: overlay;
+                        transition: all .3s ease;
+                    }
+
+                    &:hover {
+                        &:before {
+                            background-color: #8b8b8b;
+                        }
+                    }
                 }
             }
 
@@ -78,6 +99,7 @@ article.table-layout {
                 font-size: 12px;
                 text-transform: uppercase;
                 line-height: 2em;
+                padding-right: 1.5rem;
             }
         }
     }
@@ -107,6 +129,10 @@ article.table-layout {
 
             li {
                 margin-right: 0;
+            }
+
+            img {
+                transform: scale(.75)
             }
         }
     }

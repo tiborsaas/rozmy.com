@@ -17,8 +17,8 @@ a {
     transition: all .3s ease;
     border-bottom: 1px solid transparent;
     &:hover {
-        color: #c0c;
-        border-bottom: 1px solid $white;
+        color: darken($white, 15%);
+        border-bottom: 1px solid darken($white, 15%);
     }
 }
 
