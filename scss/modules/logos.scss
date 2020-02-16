@@ -22,15 +22,17 @@ section.logos {
     }
 
     @media(max-width: 500px) {
+        padding-left:0px;
+        padding-right:0px;
         .logo-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 
     @media(max-width: 360px) {
         grid-gap: 0;
         .logo-grid {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
