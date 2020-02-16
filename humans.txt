@@ -1,1 +1,10 @@
-hello humans!
+Thanks to Eszter Jozsa, Csaba Varga for their continuous support and inspiration.
+
+Design:
+Peter ‘rozmy’ Polgar
+info [at] rozmy.com
+
+Development:
+Tibor Szasz
+https://tibor.szasz.hu
+https://twitter.com/tiborsaas
