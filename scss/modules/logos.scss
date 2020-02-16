@@ -26,13 +26,15 @@ section.logos {
         padding-right:0px;
         .logo-grid {
             grid-template-columns: repeat(3, 1fr);
+            grid-gap: 4px;            
         }
     }
 
     @media(max-width: 360px) {
-        grid-gap: 0;
         .logo-grid {
             grid-template-columns: repeat(3, 1fr);
+            grid-gap: 0px;
+
         }
     }
 }
