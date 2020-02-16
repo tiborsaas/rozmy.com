@@ -3,6 +3,8 @@ section.hero {
     position: relative;
     flex-direction: column;
     padding-top: 11rem;
+    height: 100vh;
+    justify-content: flex-end;
 
     article {
         display: flex;
@@ -31,12 +33,6 @@ section.hero {
         padding: 1rem 0;
         position: relative;
         z-index: 1;
-    }
-
-    video {
-        width: 100%;
-        object-fit: cover;
-        margin-bottom: 5rem;
     }
 
     @media(max-width: 727px) {
