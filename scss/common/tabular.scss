@@ -16,7 +16,7 @@ article.table-layout {
     h1 {
         grid-column: 1/6;
         font-weight: normal;
-        font-size: 1rem;
+        font-size: .5rem;
     }
 
     .content {
@@ -38,7 +38,6 @@ article.table-layout {
             li {
                 flex: 0 1 50%;
                 height: 5rem;
-                // background: purple;
                 margin-right: 2rem;
                 display: flex;
                 justify-content: center;
