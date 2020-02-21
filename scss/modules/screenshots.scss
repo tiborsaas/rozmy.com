@@ -81,9 +81,11 @@ section.screenshots {
         &:hover {
             .hover-title {
                 opacity: 1;
+                z-index:4;
             }
             .color-overlay {
                 opacity: 1;
+                z-index:1;
             }
         }
 
