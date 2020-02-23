@@ -33,25 +33,16 @@ article.table-layout {
             margin-bottom: 3rem;
             padding-bottom: 1rem;
             border-bottom: 1px solid #3B3B3B;
-            padding-right: 20%;
-
+            
             li {
-                flex: 0 1 50%;
+                
                 height: 5rem;
                 margin-right: 2rem;
-                display: flex;
-                justify-content: center;
-
-                &:nth-child(-n+3) {
-                    flex-basis: 150%;
+                
                 }
-            }
 
             img {
-                object-fit: contain;
-                max-height: 100%;
-                max-width: 100%;
-                transition: all .5s ease;
+                
             }
         }
 
