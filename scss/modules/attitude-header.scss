@@ -1,6 +1,7 @@
 section.attitude-header {
     margin-bottom: -9.2rem;
-    overflow: hidden;
+    margin-top:-6rem;
+    //overflow: hidden;
 
     img {
         transform: translateX(calc(-9rem + #{$main-padding}));
