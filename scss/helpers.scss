@@ -36,3 +36,10 @@ span.crossout {
     text-decoration: line-through;
     font-family: inherit;
 }
+
+::selection {
+  background: #000000; 
+}
+::-moz-selection {
+  background: #000000; 
+}
