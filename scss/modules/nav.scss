@@ -4,6 +4,12 @@ nav {
     left: 0;
     right: 0;
     z-index: 3;
+    
+    animation-duration: .8s; 
+    animation-timing-function: ease-out; 
+    animation-delay: .2s; 
+    animation-iteration-count: 1;
+    animation-name: slideInFromTop; 
 
     section {
         display: flex;
@@ -34,5 +40,14 @@ nav {
         height: 60px;
         background: transparent url(../assets/rozmy.com-logo.svg) no-repeat center center;
         background-size: contain;
+    }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
     }
 }
