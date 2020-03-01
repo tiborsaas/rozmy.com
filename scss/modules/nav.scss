@@ -6,11 +6,11 @@ nav {
     z-index: 3;
     
     animation-duration: 1.2s; 
-    animation-timing-function: ease-out; 
+    animation-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);  
     animation-delay: .5s; 
     animation-iteration-count: 1;
     animation-name: slideInFromTop; 
-
+    
     section {
         display: flex;
         justify-content: space-between;
