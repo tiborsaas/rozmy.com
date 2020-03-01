@@ -8,7 +8,7 @@
         "build": "npm-run-all build-page copy-browserconfig copy-humans copy-redirects",
         "build-page": "parcel build index.html --public-url https://rozmy.com",
         "copy-browserconfig": "cpx 'assets/browserconfig/*.*' dist",
-        "copy-humans": "cpx 'humans.txt' dist"
+        "copy-humans": "cpx 'humans.txt' dist",
         "copy-redirects": "cpx '_redirects' dist"
 
     },
