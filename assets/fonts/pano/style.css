@@ -1,6 +1,8 @@
 @font-face {
-    font-family: "Pano";
-    src: url("hw-pano-regular-trial.woff2") format("woff2"), url("hw-pano-regular-trial.woff") format("woff"), url("hw-pano-regular-trial.otf") format("opentype");
-    font-style: normal;
-    font-weight: 400;
+  font-family: "Pano";
+  src: url("hw-pano-regular-trial.woff2") format("woff2"),
+    url("hw-pano-regular-trial.woff") format("woff"),
+    url("hw-pano-regular-trial.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
 }

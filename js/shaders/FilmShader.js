@@ -21,84 +21,76 @@
  */
 
 THREE.FilmShader = {
+  uniforms: {
+    tDiffuse: { value: null },
+    time: { value: 0.0 },
+    nIntensity: { value: 0.5 },
+    sIntensity: { value: 0.05 },
+    sCount: { value: 4096 },
+    grayscale: { value: 1 },
+  },
 
-	uniforms: {
+  vertexShader: [
+    "varying vec2 vUv;",
 
-		"tDiffuse":   { value: null },
-		"time":       { value: 0.0 },
-		"nIntensity": { value: 0.5 },
-		"sIntensity": { value: 0.05 },
-		"sCount":     { value: 4096 },
-		"grayscale":  { value: 1 }
+    "void main() {",
 
-	},
+    "vUv = uv;",
+    "gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );",
 
-	vertexShader: [
+    "}",
+  ].join("\n"),
 
-		"varying vec2 vUv;",
+  fragmentShader: [
+    "#include <common>",
 
-		"void main() {",
+    // control parameter
+    "uniform float time;",
 
-			"vUv = uv;",
-			"gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );",
+    "uniform bool grayscale;",
 
-		"}"
+    // noise effect intensity value (0 = no effect, 1 = full effect)
+    "uniform float nIntensity;",
 
-	].join( "\n" ),
+    // scanlines effect intensity value (0 = no effect, 1 = full effect)
+    "uniform float sIntensity;",
 
-	fragmentShader: [
+    // scanlines effect count value (0 = no effect, 4096 = full effect)
+    "uniform float sCount;",
 
-		"#include <common>",
-		
-		// control parameter
-		"uniform float time;",
+    "uniform sampler2D tDiffuse;",
 
-		"uniform bool grayscale;",
+    "varying vec2 vUv;",
 
-		// noise effect intensity value (0 = no effect, 1 = full effect)
-		"uniform float nIntensity;",
+    "void main() {",
 
-		// scanlines effect intensity value (0 = no effect, 1 = full effect)
-		"uniform float sIntensity;",
+    // sample the source
+    "vec4 cTextureScreen = texture2D( tDiffuse, vUv );",
 
-		// scanlines effect count value (0 = no effect, 4096 = full effect)
-		"uniform float sCount;",
+    // make some noise
+    "float dx = rand( vUv + time );",
 
-		"uniform sampler2D tDiffuse;",
+    // add noise
+    "vec3 cResult = cTextureScreen.rgb + cTextureScreen.rgb * clamp( 0.1 + dx, 0.0, 1.0 );",
 
-		"varying vec2 vUv;",
+    // get us a sine and cosine
+    "vec2 sc = vec2( sin( vUv.y * sCount ), cos( vUv.y * sCount ) );",
 
-		"void main() {",
+    // add scanlines
+    "cResult += cTextureScreen.rgb * vec3( sc.x, sc.y, sc.x ) * sIntensity;",
 
-			// sample the source
-			"vec4 cTextureScreen = texture2D( tDiffuse, vUv );",
+    // interpolate between source and result by intensity
+    "cResult = cTextureScreen.rgb + clamp( nIntensity, 0.0,1.0 ) * ( cResult - cTextureScreen.rgb );",
 
-			// make some noise
-			"float dx = rand( vUv + time );",
+    // convert to grayscale if desired
+    "if( grayscale ) {",
 
-			// add noise
-			"vec3 cResult = cTextureScreen.rgb + cTextureScreen.rgb * clamp( 0.1 + dx, 0.0, 1.0 );",
+    "cResult = vec3( cResult.r * 0.3 + cResult.g * 0.59 + cResult.b * 0.11 );",
 
-			// get us a sine and cosine
-			"vec2 sc = vec2( sin( vUv.y * sCount ), cos( vUv.y * sCount ) );",
+    "}",
 
-			// add scanlines
-			"cResult += cTextureScreen.rgb * vec3( sc.x, sc.y, sc.x ) * sIntensity;",
+    "gl_FragColor =  vec4( cResult, cTextureScreen.a );",
 
-			// interpolate between source and result by intensity
-			"cResult = cTextureScreen.rgb + clamp( nIntensity, 0.0,1.0 ) * ( cResult - cTextureScreen.rgb );",
-
-			// convert to grayscale if desired
-			"if( grayscale ) {",
-
-				"cResult = vec3( cResult.r * 0.3 + cResult.g * 0.59 + cResult.b * 0.11 );",
-
-			"}",
-
-			"gl_FragColor =  vec4( cResult, cTextureScreen.a );",
-
-		"}"
-
-	].join( "\n" )
-
+    "}",
+  ].join("\n"),
 };

@@ -1,28 +1,28 @@
 {
-    "name": "rozmy.com",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "start": "parcel index.html --open",
-        "build": "npm-run-all build-page copy-browserconfig copy-humans copy-redirects",
-        "build-page": "parcel build index.html --public-url https://rozmy.com",
-        "copy-browserconfig": "cpx 'assets/browserconfig/*.*' dist",
-        "copy-humans": "cpx 'humans.txt' dist",
-        "copy-redirects": "cpx '_redirects' dist"
-
-    },
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "glslCanvas": "^0.1.7"
-    },
-    "devDependencies": {
-        "cpx": "^1.5.0",
-        "glslify-bundle": "^5.1.1",
-        "glslify-deps": "^1.3.1",
-        "npm-run-all": "^4.1.5",
-        "parcel-bundler": "^1.12.4",
-        "sass": "^1.23.3"
-    }
+  "name": "rozmy.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "npm-run-all build-page copy-browserconfig copy-humans copy-redirects",
+    "build-page": "parcel build index.html --public-url https://rozmy.com",
+    "copy-browserconfig": "cpx 'assets/browserconfig/*.*' dist",
+    "copy-humans": "cpx 'humans.txt' dist",
+    "copy-redirects": "cpx '_redirects' dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "glslCanvas": "^0.1.7"
+  },
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "glslify-bundle": "^5.1.1",
+    "glslify-deps": "^1.3.1",
+    "npm-run-all": "^4.1.5",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "2.1.1",
+    "sass": "^1.23.3"
+  }
 }

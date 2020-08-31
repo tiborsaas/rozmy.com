@@ -1,22 +1,23 @@
-@import 'variables';
-@import 'helpers';
-@import 'imports';
-@import 'sections';
-@import 'common/tabular';
+@import "variables";
+@import "helpers";
+@import "imports";
+@import "sections";
+@import "common/tabular";
 //
-@import 'modules/nav';
-@import 'modules/header-video';
-@import 'modules/hero';
-@import 'modules/bio';
-@import 'modules/logos';
-@import 'modules/screenshots';
-@import 'modules/attitude-header';
-@import 'modules/wolves-header';
-@import 'modules/wild-mind-header';
-@import 'modules/footer';
+@import "modules/nav";
+@import "modules/header-video";
+@import "modules/hero";
+@import "modules/hero-test";
+@import "modules/bio";
+@import "modules/logos";
+@import "modules/screenshots";
+@import "modules/attitude-header";
+@import "modules/wolves-header";
+@import "modules/wild-mind-header";
+@import "modules/footer";
 //
 main {
-    max-width: $max-width;
-    position: relative;
-    margin: auto;
+  max-width: $max-width;
+  position: relative;
+  margin: auto;
 }
