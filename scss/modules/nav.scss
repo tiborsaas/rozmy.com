@@ -1,53 +1,54 @@
 nav {
-    position: fixed;
-    top: 2rem;
-    left: 0;
-    right: 0;
-    z-index: 3;
-    
-    animation-duration: 1.2s; 
-    animation-timing-function: ease-out;  
-    animation-delay: .5s; 
-    animation-iteration-count: 1;
-    animation-name: slideInFromTop; 
-    
-    section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        max-width: $max-width;
-        padding: $main-padding;
-        margin: auto;
-    }
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  z-index: 3;
 
-    ul {
-        display: flex;
-        list-style-type: none;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-name: slideInFromTop;
 
-        li {
-            margin-left: 2rem;
+  section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $max-width;
+    padding: $main-padding;
+    margin: auto;
+  }
 
-            a {
-                color: $white;
-                font-size: 0.8rem;
-                padding: 1rem 0;
-            }
-        }
+  ul {
+    display: flex;
+    list-style-type: none;
+
+    li {
+      margin-left: 2rem;
+
+      a {
+        color: $white;
+        font-size: 0.8rem;
+        padding: 1rem 0;
+      }
     }
-    //
-    .logo {
-        width: 60px;
-        height: 60px;
-        background: transparent url(../assets/rozmy.com-logo.svg) no-repeat center center;
-        background-size: contain;
-    }
+  }
+  //
+  .logo {
+    width: 60px;
+    height: 60px;
+    background: transparent url(../assets/rozmy.com-logo.svg) no-repeat center
+      center;
+    background-size: contain;
+  }
 }
 
 @keyframes slideInFromTop {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }

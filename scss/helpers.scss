@@ -1,45 +1,45 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: $mono-font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $mono-font;
 }
 
 body {
-    color: $white;
-    background: $black;
-    overflow-x: hidden;
+  color: $white;
+  background: $black;
+  overflow-x: hidden;
 }
 
 a {
-    color: $white;
-    text-decoration: none;
-    transition: all .3s ease;
-    border-bottom: 1px solid transparent;
-    &:hover {
-        color: darken($white, 15%);
-        border-bottom: 1px solid darken($white, 15%);
-    }
+  color: $white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    color: darken($white, 15%);
+    border-bottom: 1px solid darken($white, 15%);
+  }
 }
 
 p {
-    line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 .vcenter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 span.crossout {
-    text-decoration: line-through;
-    font-family: inherit;
+  text-decoration: line-through;
+  font-family: inherit;
 }
 
 ::selection {
-  background: #000000; 
+  background: #000000;
 }
 ::-moz-selection {
-  background: #000000; 
+  background: #000000;
 }

@@ -1,39 +1,39 @@
 section.attitude-header {
-    margin-bottom: -12rem;
-    margin-top:-4rem;
+  margin-bottom: -12rem;
+  margin-top: -4rem;
 
-    img {
-        transform: translateX(calc(-9rem + #{$main-padding}));
-    }
+  img {
+    transform: translateX(calc(-9rem + #{$main-padding}));
+  }
 
+  h1 {
+    font-family: pano;
+    font-weight: 400;
+    font-size: 100px;
+    line-height: 100px;
+    position: absolute;
+    top: 7.5rem;
+    left: calc(-8px + #{$main-padding});
+  }
+
+  @media (max-width: 1020px) {
     h1 {
-        font-family: pano;
-        font-weight: 400;
-        font-size: 100px;
-        line-height: 100px;
-        position: absolute;
-        top: 7.5rem;
-        left: calc(-8px + #{$main-padding});
+      top: 5rem;
+      // font-size: 9vw;
+      // line-height: 10vw;
     }
+    img {
+      transform: translateX(0);
+    }
+  }
 
-    @media(max-width: 1020px) {
-        h1 {
-            top: 5rem;
-            // font-size: 9vw;
-            // line-height: 10vw;
-        }
-        img {
-            transform: translateX(0);
-        }
+  @media (max-width: 696px) {
+    h1 {
+      top: inherit;
+      margin-bottom: 6rem;
+      bottom: 9rem;
+      font-size: 12vw;
+      line-height: 13vw;
     }
-
-    @media(max-width: 696px) {
-        h1 {
-            top: inherit;
-            margin-bottom: 6rem;
-            bottom: 9rem;
-            font-size: 12vw;
-            line-height: 13vw;
-        }
-    }
+  }
 }

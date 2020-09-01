@@ -1,1 +1,28 @@
-{"dependencies":[{"name":"C:\\dev\\www\\rozmy.com\\node_modules\\adaptive-bezier-curve\\package.json","includedInParent":true,"mtime":1522511390257},{"name":"./function","loc":{"line":1,"column":25}}],"generated":{"js":"module.exports=require(\"./function\")();","map":{"mappings":[{"source":"rozmy.com\\node_modules\\adaptive-bezier-curve\\index.js","original":{"line":1,"column":0},"generated":{"line":1,"column":0}}],"sources":{"rozmy.com\\node_modules\\adaptive-bezier-curve\\index.js":"module.exports = require('./function')()"},"lineCount":1}},"hash":"b9d23c0522d25dfc4a54dbd20572cfc9","cacheData":{"env":{}}}
+{
+  "dependencies": [
+    {
+      "name": "C:\\dev\\www\\rozmy.com\\node_modules\\adaptive-bezier-curve\\package.json",
+      "includedInParent": true,
+      "mtime": 1522511390257
+    },
+    { "name": "./function", "loc": { "line": 1, "column": 25 } }
+  ],
+  "generated": {
+    "js": "module.exports=require(\"./function\")();",
+    "map": {
+      "mappings": [
+        {
+          "source": "rozmy.com\\node_modules\\adaptive-bezier-curve\\index.js",
+          "original": { "line": 1, "column": 0 },
+          "generated": { "line": 1, "column": 0 }
+        }
+      ],
+      "sources": {
+        "rozmy.com\\node_modules\\adaptive-bezier-curve\\index.js": "module.exports = require('./function')()"
+      },
+      "lineCount": 1
+    }
+  },
+  "hash": "b9d23c0522d25dfc4a54dbd20572cfc9",
+  "cacheData": { "env": {} }
+}

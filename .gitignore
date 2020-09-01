@@ -61,3 +61,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Webstorm
+.idea
+
+# Parcel cache
+.cache

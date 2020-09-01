@@ -1,72 +1,72 @@
 section.wolves-header {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 
-    img.grid {
-        position: absolute;
-        left: 9.8rem;
-        top: 4rem;
-        z-index: 2;
-    }
+  img.grid {
+    position: absolute;
+    left: 9.8rem;
+    top: 4rem;
+    z-index: 2;
+  }
 
-    img.rozmy {
-        position: relative;
-        width: 66%;
-        margin-left: 28.5%;
-        z-index: 1;
-    }
+  img.rozmy {
+    position: relative;
+    width: 66%;
+    margin-left: 28.5%;
+    z-index: 1;
+  }
 
-    img.logo {
-        position: absolute;
-        width: 45%;
-        right: -6rem;
-        top: 7.6rem;
-        z-index: 2;
-    }
+  img.logo {
+    position: absolute;
+    width: 45%;
+    right: -6rem;
+    top: 7.6rem;
+    z-index: 2;
+  }
 
-    img.trouble {
-        position: absolute;
-        width: 50%;
-        left: 2rem;
-        bottom: 2.5rem;
-        z-index: 0;
-        width: 27%;
-    }
+  img.trouble {
+    position: absolute;
+    width: 50%;
+    left: 2rem;
+    bottom: 2.5rem;
+    z-index: 0;
+    width: 27%;
+  }
 
+  h1 {
+    font-family: pano;
+    font-weight: 400;
+    font-size: 100px;
+    position: absolute;
+    bottom: 5rem;
+    left: calc(-8px + #{$main-padding});
+    line-height: 1em;
+    z-index: 2;
+  }
+
+  @media (max-width: 1020px) {
     h1 {
-        font-family: pano;
-        font-weight: 400;
-        font-size: 100px;
-        position: absolute;
-        bottom: 5rem;
-        left: calc(-8px + #{$main-padding});
-        line-height: 1em;
-        z-index: 2;
+      font-size: 9vw;
+      line-height: 10vw;
+      left: calc(-4px + #{$main-padding});
     }
+    img {
+      transform: translateX(0);
+    }
+  }
 
-    @media(max-width: 1020px) {
-        h1 {
-            font-size: 9vw;
-            line-height: 10vw;
-            left: calc(-4px + #{$main-padding});
-        }
-        img {
-            transform: translateX(0);
-        }
+  @media (max-width: 777px) {
+    img.rozmy {
+      width: 71.5%;
     }
+  }
 
-    @media(max-width: 777px) {
-        img.rozmy {
-            width: 71.5%;
-        }
+  @media (max-width: 500px) {
+    img.trouble {
+      display: none;
     }
-
-    @media(max-width: 500px) {
-        img.trouble {
-            display: none;
-        }
-        img.rozmy {
-            width: 100%;
-            margin: 0;
-        }
+    img.rozmy {
+      width: 100%;
+      margin: 0;
     }
+  }
 }

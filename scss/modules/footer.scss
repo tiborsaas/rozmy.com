@@ -1,36 +1,36 @@
 footer {
-    padding: 14rem 2rem;
-    margin-top:6rem;
+  padding: 14rem 2rem;
+  margin-top: 6rem;
 
+  article {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 40px;
+
+    div {
+      grid-column: 1/6;
+    }
+
+    p {
+      grid-column: 6/13;
+    }
+  }
+
+  @media (max-width: 500px) {
     article {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-column-gap: 40px;
+      display: flex;
+      flex-direction: column;
 
-        div {
-            grid-column: 1/6;
-        }
-
-        p {
-            grid-column: 6/13;
-        }
+      div {
+        margin-bottom: 1rem;
+      }
     }
-
-    @media(max-width: 500px) {
-        article {
-            display: flex;
-            flex-direction: column;
-
-            div {
-                margin-bottom: 1rem;
-            }
-        }
-    }
+  }
 }
 .blink {
-  animation: blink-animation 0.8s steps(2,start) infinite;
-  -webkit-animation: blink-animation 0.8s steps(2,start) infinite;
-    }
+  animation: blink-animation 0.8s steps(2, start) infinite;
+  -webkit-animation: blink-animation 0.8s steps(2, start) infinite;
+}
 @keyframes blink-animation {
   to {
     visibility: hidden;

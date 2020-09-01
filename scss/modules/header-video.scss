@@ -1,14 +1,14 @@
 section.header-video {
-    display: flex;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
 
-    video {
-        width: 100%;
-        object-fit: cover;
-    }
+  video {
+    width: 100%;
+    object-fit: cover;
+  }
 }
