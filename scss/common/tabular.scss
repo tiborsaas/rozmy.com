@@ -110,4 +110,15 @@ article.table-layout {
       border-top: none;
     }
   }
+
+  @media (max-width: 768px) {
+    .content dl {
+      dd,
+      dt {
+        a::before {
+          display: none;
+        }
+      }
+    }
+  }
 }

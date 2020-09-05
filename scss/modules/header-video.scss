@@ -6,12 +6,12 @@ section.header-video {
   right: 0;
   bottom: 0;
   padding: 0;
+  opacity: 0;
+  animation: fade-in 2s linear 1s forwards;
 
   video {
     width: 100%;
-    opacity: 0;
     object-fit: cover;
-    animation: fade-in 2s linear 1s forwards;
   }
 }
 
