@@ -1,5 +1,6 @@
 section.wolves-header {
   margin-bottom: 3rem;
+  overflow: hidden;
 
   img.grid {
     position: absolute;
@@ -25,7 +26,6 @@ section.wolves-header {
 
   img.trouble {
     position: absolute;
-    width: 50%;
     left: 2rem;
     bottom: 2.5rem;
     z-index: 0;
