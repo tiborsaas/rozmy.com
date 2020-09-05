@@ -15,7 +15,7 @@ section.hero {
   h1 {
     font-family: $display-font;
     font-weight: 400;
-    font-size: 84px;
+    font-size: 100px;
     line-height: 88px;
     padding-bottom: 1rem;
     position: relative;
@@ -46,14 +46,14 @@ section.hero {
           height: 100%;
           background: white;
           transform: translateX(calc(-100% - 1px));
-          animation: curtain 0.65s 200ms forwards ease-in;
+          animation: curtain 0.65s 200ms forwards ease-in-out;
         }
       }
 
       span {
-        font-family: pano;
+        font-family: $display-font;
         opacity: 0;
-        animation: reveal 0s 325ms forwards;
+        animation: reveal 0s 325ms forwards ease-in-out;
       }
 
       .skeleton {
@@ -139,6 +139,8 @@ section.hero {
       }
     }
 
+
+
     span {
       font-family: inherit;
       display: block;
@@ -152,6 +154,13 @@ section.hero {
     position: relative;
     z-index: 1;
   }
+
+@media (max-width: 727px) {
+    h1 {
+      font-size: 10vw;
+      line-height: 11vw;
+    }
+}    
 
   @media (max-width: 727px) {
     h1 {

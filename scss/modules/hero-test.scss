@@ -51,7 +51,7 @@ section.hero-test {
       }
 
       span {
-        font-family: pano;
+        font-family: $display-font;
         opacity: 0;
         animation: reveal 0s 325ms forwards;
       }
@@ -83,7 +83,7 @@ section.hero-test {
               to top left,
               rgba(255, 255, 255, 0) 0%,
               rgba(255, 255, 255, 0) calc(50% - 1px),
-              rgba(255, 255, 255, 1) 50%,
+              rgba(255, 255, 255, .4) 50%,
               rgba(255, 255, 255, 0) calc(50% + 1px),
               rgba(255, 255, 255, 0) 100%
             ),
@@ -91,7 +91,7 @@ section.hero-test {
               to top right,
               rgba(255, 255, 255, 0) 0%,
               rgba(255, 255, 255, 0) calc(50% - 1px),
-              rgba(255, 255, 255, 1) 50%,
+              rgba(255, 255, 255, .4) 50%,
               rgba(255, 255, 255, 0) calc(50% + 1px),
               rgba(255, 255, 255, 0) 100%
             );
@@ -100,7 +100,7 @@ section.hero-test {
 
       &.delay-1 {
         .curtain::after {
-          animation: curtain 0.65s 400ms forwards ease-in;
+          animation: curtain 0.65s 400ms forwards ease-in-out;
         }
 
         span {
@@ -120,7 +120,7 @@ section.hero-test {
 
       &.delay-2 {
         .curtain::after {
-          animation: curtain 0.65s 600ms forwards ease-in;
+          animation: curtain 0.65s 600ms forwards ease-in-out;
         }
 
         span {
@@ -171,7 +171,13 @@ section.hero-test {
   0% {
     opacity: 0;
   }
+  20% {
+    opacity: 1;
+  }
   50% {
+    opacity: 0;
+  }
+  70% {
     opacity: 1;
   }
   100% {
@@ -183,10 +189,10 @@ section.hero-test {
   0% {
     transform: translateX(calc(-100% - 1px));
   }
-  20% {
+  30% {
     transform: translateX(0px);
   }
-  80% {
+  60% {
     transform: translateX(0px);
   }
   100% {
